@@ -1,0 +1,2371 @@
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <script src="https://js-agent.newrelic.com/nr-spa-1211.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Application Form</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js"
+        integrity="sha512-k2WPPrSgRFI6cTaHHhJdc8kAXaRM4JBFEDo1pPGGlYiOyv4vnA0Pp0G5XMYYxgAPmtmv/IIaQA6n5fLAyJaFMA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"
+        integrity="sha512-pHVGpX7F/27yZ0ISY+VVjyULApbDlD0/X0rgGbTqCE7WFW5MezNTWG/dnhtbBuICzsd0WQPgpE4REBLv+UqChw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"
+        integrity="sha512-uto9mlQzrs59VwILcLiRYeLKPPbS/bT71da/OEBYEwcdNUk8jYIy+D176RYoop1Da+f9mvkYrmj5MCLZWEtQuA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
+        integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/themes/base/jquery-ui.min.css"
+        integrity="sha512-okE4owXD0kfXzgVXBzCDIiSSlpXn3tJbNodngsTnIYPJWjuYhtJ+qMoc0+WUwLHeOwns0wm57Ka903FqQKM1sA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js"
+        integrity="sha512-oBTprMeNEKCnqfuqKd6sbvFzmFQtlXS3e0C/RGFV0hD6QzhHV+ODfaQbAlmY6/q0ubbwlAM/nCJjkrgA3waLzg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.25.3/moment.min.js"
+        integrity="sha512-Z0SCX0bDbIzeUvsuax6apRISiAoxS1mXL05AO0tLdthrLb/uaVYUCqiRzMi/vqip5GQeo2p6jaMplnGl//yOvA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <style>
+        body {
+            padding-top: 50px;
+        }
+
+        .starter-template {
+            padding: 40px 15px;
+            text-align: center;
+        }
+
+        div.with-errors {
+            color: red;
+            font-size: 0.9em;
+        }
+
+        div.form-group.required label:after {
+            color: red;
+            content: " *";
+        }
+
+        .has-error .help-block {
+            color: #a94442 !important;
+        }
+
+        .invisible-field {
+            display: none !important;
+        }
+
+        .payment {
+            display: block;
+        }
+
+        .modal-content {
+            width: 820px;
+        }
+
+        .text-capitalize {
+            text-transform: capitalize;
+        }
+
+        /* Custom styles */
+
+
+
+
+        body {
+            background-color: #fefefe;
+            color: #917a69;
+        }
+
+        h1 {
+            font-family: Montserrat, sans-serif;
+            font-size: 3em;
+            font-style: normal;
+            font-weight: 700;
+        }
+
+        h22 {
+            font-family: Montserrat, sans-serif;
+            font-size: 1em;
+            font-style: normal;
+            font-weight: 700;
+        }
+
+        label {
+            font-weight: normal;
+        }
+
+        h4 {
+            background-color: #917a69;
+            color: #fefefe;
+            padding: 20px;
+            text-align: justify;
+            border-radius: 8px;
+            box-shadow: 3px 3px 3px #917a69;
+
+        }
+
+        .form-control {
+            font-size: 14px;
+            color: #777;
+            background-color: #f7f2ee;
+            border: none;
+            border-bottom: 3px solid #d6c9bd;
+            border-radius: 8px;
+            box-shadow: none;
+        }
+
+        div.with-errors {
+            display: none !important;
+            color: #fefefe;
+
+        }
+
+        .starter-template .lead {
+            font-size: 2em;
+            border-bottom: #d3cac4 solid 1px;
+
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="starter-template">
+            <img itemprop="image" class="mobile"
+                src="https://grupoayudate.com/wp-content/uploads/2019/05/grupo-ayudate.png" alt="Logo">
+            <h1>Ayudate Loan Application</h1>
+            <p class="lead">$500 Loan</p>
+        </div>
+        <form method="post" id="submitForm" autocomplete="off" action="#">
+            <section class="controls js-section-1">
+                <h2>Personal Information</h2>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group js-group-Customer.customerType  invisible-field  required "
+                            data-strict="">
+                            <label class="">
+                                Customer Type
+                            </label>
+                            <select class="form-control js-collection" id="Customer.customerType"
+                                name="Customer.customerType">
+                                <option value="customer.type.company">
+                                    Company
+                                </option>
+                                <option value="customer.type.flooringCustomer">
+                                    Flooring Customer
+                                </option>
+                                <option value="customer.type.individual" selected="">
+                                    Individual
+                                </option>
+                                }
+                            </select>
+                            <div class="help-block with-errors" style="display: none;">
+                                <ul class="list-unstyled">
+                                    <li></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="form-group js-group-Customer.status  invisible-field  required " data-strict="">
+                            <label class="">
+                                Status
+                            </label>
+                            <select class="form-control js-collection" id="Customer.status" name="Customer.status">
+                                <option value="Active">
+                                    Active
+                                </option>
+                                <option value="Lead" selected="">
+                                    Lead
+                                </option>
+                                <option value="Inactive">
+                                    Inactive
+                                </option>
+
+                            </select>
+                            <div class="help-block with-errors" style="display: none;">
+                                <ul class="list-unstyled">
+                                    <li></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="form-group js-group-Customer.generationCode  invisible-field   "
+                            style="display: block;">
+                            <label class="">
+                                Generation Code
+                            </label>
+                            <select class="form-control js-collection" id="Customer.generationCode"
+                                name="Customer.generationCode">
+                                <option value="customer.generationCode.ii">
+                                    II
+                                </option>
+                                <option value="customer.generationCode.iii">
+                                    III
+                                </option>
+                                <option value="customer.generationCode.iv">
+                                    IV
+                                </option>
+                                <option value="customer.generationCode.ix">
+                                    IX
+                                </option>
+                                <option value="customer.generationCode.jr">
+                                    Jr
+                                </option>
+                                <option value="customer.generationCode.none">
+                                    None
+                                </option>
+                                <option value="customer.generationCode.sr">
+                                    Sr
+                                </option>
+                                <option value="customer.generationCode.v">
+                                    V
+                                </option>
+                                <option value="customer.generationCode.vi">
+                                    VI
+                                </option>
+                                <option value="customer.generationCode.vii">
+                                    VII
+                                </option>
+                                <option value="customer.generationCode.viii">
+                                    VIII
+                                </option>
+
+                            </select>
+                            <div class="help-block with-errors" style="display: none;">
+                                <ul class="list-unstyled">
+                                    <li></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="form-group js-group-Customer.firstName  required ">
+                            <label class="">
+                                First Name
+                            </label>
+                            <input type="text" autocomplete="off" class="form-control js-text" id="Customer.firstName"
+                                name="Customer.firstName" value="">
+                            <div class="help-block with-errors" style="">
+                                <ul class="list-unstyled">
+                                    <li>Field is required</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-md-6">
+
+                        <div class="form-group js-group-Customer.middleName   ">
+                            <label class="">
+                                Middle Name
+                            </label>
+                            <input type="text" autocomplete="off" class="form-control js-text" id="Customer.middleName"
+                                name="Customer.middleName" value="">
+                            <div class="help-block with-errors" style="display: none;">
+                                <ul class="list-unstyled">
+                                    <li></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+
+                        <div class="form-group js-group-Customer.lastName  required ">
+                            <label class="">
+                                Last Name
+                            </label>
+                            <input type="text" autocomplete="off" class="form-control js-text" id="Customer.lastName"
+                                name="Customer.lastName" value="">
+                            <div class="help-block with-errors" style="">
+                                <ul class="list-unstyled">
+                                    <li>Field is required</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-md-6">
+
+                        <div class="form-group js-group-Customer.gender  required ">
+                            <label class="">
+                                Gender
+                            </label>
+                            <select class="form-control js-collection" id="Customer.gender" name="Customer.gender">
+                                <option value="customer.gender.female">
+                                    Female
+                                </option>
+                                <option value="customer.gender.male">
+                                    Male
+                                </option>
+                                <option value="customer.gender.unknown">
+                                    Unknown
+                                </option>
+
+                            </select>
+                            <div class="help-block with-errors" style="display: none;">
+                                <ul class="list-unstyled">
+                                    <li></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+
+                        <div class="form-group js-group-Customer.birthDate  required ">
+                            <label class="">
+                                Date Of Birth
+                            </label>
+                            <input type="text" autocomplete="off" class="form-control js-date" id="Customer.birthDate"
+                                data-initial-value="" name="Customer.birthDate" value="" placeholder="MM/DD/YYYY"
+                                maxlength="10">
+                            <div class="help-block with-errors" style="">
+                                <ul class="list-unstyled">
+                                    <li>Field is required</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-md-6">
+
+                        <div class="form-group js-group-Customer.CustomField.20  required custom-field">
+                            <label class="">
+                                Country of Birth
+                            </label>
+                            <input type="text" autocomplete="off" class="form-control js-text"
+                                id="Customer.CustomField.20" name="Customer.CustomField.20" value="">
+                            <div class="help-block with-errors" style="">
+                                <ul class="list-unstyled">
+                                    <li>Field is required</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+
+                        <div class="form-group js-group-Customer.CustomField.48  required custom-field">
+                            <label class="">
+                                State of Birth
+                            </label>
+                            <input type="text" autocomplete="off" class="form-control js-text"
+                                id="Customer.CustomField.48" name="Customer.CustomField.48" value="">
+                            <div class="help-block with-errors" style="">
+                                <ul class="list-unstyled">
+                                    <li>Field is required</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-md-6">
+
+                        <div class="form-group js-group-Customer.CustomField.49  required custom-field">
+                            <label class="">
+                                City or Town of Birth
+                            </label>
+                            <input type="text" autocomplete="off" class="form-control js-text"
+                                id="Customer.CustomField.49" name="Customer.CustomField.49" value="">
+                            <div class="help-block with-errors" style="">
+                                <ul class="list-unstyled">
+                                    <li>Field is required</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+
+                        <div class="form-group js-group-Customer.driverLicense  required ">
+                            <label class="">
+                                License / Passport / Matricula
+                            </label>
+                            <input type="text" autocomplete="off" class="form-control js-text"
+                                id="Customer.driverLicense" name="Customer.driverLicense" value="">
+                            <div class="help-block with-errors" style="">
+                                <ul class="list-unstyled">
+                                    <li>Field is required</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-md-6">
+
+                        <div class="form-group js-group-Customer.ssn   ">
+                            <label class="">
+                                SSN / ITIN
+                            </label>
+                            <input type="password" autocomplete="off" class="form-control js-ssn" id="Customer.ssn"
+                                name="Customer.ssn" value="" maxlength="11">
+                            <div class="help-block with-errors" style="display: none;">
+                                <ul class="list-unstyled">
+                                    <li></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+
+                        <div class="form-group js-group-Customer.PrimaryAddress.address1  required ">
+                            <label class="">
+                                Address
+                            </label>
+                            <input type="text" autocomplete="off" class="form-control js-text"
+                                id="Customer.PrimaryAddress.address1" name="Customer.PrimaryAddress.address1" value="">
+                            <div class="help-block with-errors" style="">
+                                <ul class="list-unstyled">
+                                    <li>Field is required</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-md-6">
+
+                        <div class="form-group js-group-Customer.PrimaryAddress.zipcode_usa  required ">
+                            <label class="">
+                                ZIP Code
+                            </label>
+                            <input type="text" autocomplete="off" class="form-control js-zip"
+                                id="Customer.PrimaryAddress.zipcode_usa" name="Customer.PrimaryAddress.zipcode_usa"
+                                value="" maxlength="10">
+                            <div class="help-block with-errors" style="">
+                                <ul class="list-unstyled">
+                                    <li>Field is required</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+
+                        <div class="form-group js-group-Customer.PrimaryAddress.city  required ">
+                            <label class="">
+                                City
+                            </label>
+                            <input type="text" autocomplete="off" class="form-control js-text"
+                                id="Customer.PrimaryAddress.city" name="Customer.PrimaryAddress.city" value="">
+                            <div class="help-block with-errors" style="">
+                                <ul class="list-unstyled">
+                                    <li>Field is required</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-md-6">
+
+                        <div class="form-group js-group-Customer.PrimaryAddress.state_usa  required ">
+                            <label class="">
+                                State
+                            </label>
+                            <select class="form-control js-collection" id="Customer.PrimaryAddress.state_usa"
+                                name="Customer.PrimaryAddress.state_usa">
+                                <option value="geo.state.AA">
+                                    U.S. Armed Forces – Americas
+                                </option>
+                                <option value="geo.state.AE">
+                                    U.S. Armed Forces – Europe
+                                </option>
+                                <option value="geo.state.AK">
+                                    Alaska
+                                </option>
+                                <option value="geo.state.AL">
+                                    Alabama
+                                </option>
+                                <option value="geo.state.AP">
+                                    U.S. Armed Forces – Pacific
+                                </option>
+                                <option value="geo.state.AR">
+                                    Arkansas
+                                </option>
+                                <option value="geo.state.AS">
+                                    American Samoa
+                                </option>
+                                <option value="geo.state.AZ">
+                                    Arizona
+                                </option>
+                                <option value="geo.state.CA">
+                                    California
+                                </option>
+                                <option value="geo.state.CO">
+                                    Colorado
+                                </option>
+                                <option value="geo.state.CT">
+                                    Connecticut
+                                </option>
+                                <option value="geo.state.DC">
+                                    District of Columbia
+                                </option>
+                                <option value="geo.state.DE">
+                                    Delaware
+                                </option>
+                                <option value="geo.state.FL">
+                                    Florida
+                                </option>
+                                <option value="geo.state.FM">
+                                    Federated States of Micronesia
+                                </option>
+                                <option value="geo.state.GA">
+                                    Georgia
+                                </option>
+                                <option value="geo.state.GU">
+                                    Guam
+                                </option>
+                                <option value="geo.state.HI">
+                                    Hawaii
+                                </option>
+                                <option value="geo.state.IA">
+                                    Iowa
+                                </option>
+                                <option value="geo.state.ID">
+                                    Idaho
+                                </option>
+                                <option value="geo.state.IL">
+                                    Illinois
+                                </option>
+                                <option value="geo.state.IN">
+                                    Indiana
+                                </option>
+                                <option value="geo.state.KS">
+                                    Kansas
+                                </option>
+                                <option value="geo.state.KY">
+                                    Kentucky
+                                </option>
+                                <option value="geo.state.LA">
+                                    Louisiana
+                                </option>
+                                <option value="geo.state.MA">
+                                    Massachusetts
+                                </option>
+                                <option value="geo.state.MD">
+                                    Maryland
+                                </option>
+                                <option value="geo.state.ME">
+                                    Maine
+                                </option>
+                                <option value="geo.state.MH">
+                                    Marshall Islands
+                                </option>
+                                <option value="geo.state.MI">
+                                    Michigan
+                                </option>
+                                <option value="geo.state.MN">
+                                    Minnesota
+                                </option>
+                                <option value="geo.state.MO">
+                                    Missouri
+                                </option>
+                                <option value="geo.state.MP">
+                                    Northern Mariana Islands
+                                </option>
+                                <option value="geo.state.MS">
+                                    Mississippi
+                                </option>
+                                <option value="geo.state.MT">
+                                    Montana
+                                </option>
+                                <option value="geo.state.NC">
+                                    North Carolina
+                                </option>
+                                <option value="geo.state.ND">
+                                    North Dakota
+                                </option>
+                                <option value="geo.state.NE">
+                                    Nebraska
+                                </option>
+                                <option value="geo.state.NH">
+                                    New Hampshire
+                                </option>
+                                <option value="geo.state.NJ">
+                                    New Jersey
+                                </option>
+                                <option value="geo.state.NM">
+                                    New Mexico
+                                </option>
+                                <option value="geo.state.NV">
+                                    Nevada
+                                </option>
+                                <option value="geo.state.NY">
+                                    New York
+                                </option>
+                                <option value="geo.state.OH">
+                                    Ohio
+                                </option>
+                                <option value="geo.state.OK">
+                                    Oklahoma
+                                </option>
+                                <option value="geo.state.OR">
+                                    Oregon
+                                </option>
+                                <option value="geo.state.PA">
+                                    Pennsylvania
+                                </option>
+                                <option value="geo.state.PR">
+                                    Puerto Rico
+                                </option>
+                                <option value="geo.state.PW">
+                                    Palau
+                                </option>
+                                <option value="geo.state.RI">
+                                    Rhode Island
+                                </option>
+                                <option value="geo.state.SC">
+                                    South Carolina
+                                </option>
+                                <option value="geo.state.SD">
+                                    South Dakota
+                                </option>
+                                <option value="geo.state.TN">
+                                    Tennessee
+                                </option>
+                                <option value="geo.state.TX">
+                                    Texas
+                                </option>
+                                <option value="geo.state.UT">
+                                    Utah
+                                </option>
+                                <option value="geo.state.VA">
+                                    Virginia
+                                </option>
+                                <option value="geo.state.VI">
+                                    Virgin Islands
+                                </option>
+                                <option value="geo.state.VT">
+                                    Vermont
+                                </option>
+                                <option value="geo.state.WA">
+                                    Washington
+                                </option>
+                                <option value="geo.state.WI">
+                                    Wisconsin
+                                </option>
+                                <option value="geo.state.WV">
+                                    West Virginia
+                                </option>
+                                <option value="geo.state.WY">
+                                    Wyoming
+                                </option>
+                                }
+                            </select>
+                            <div class="help-block with-errors" style="display: none;">
+                                <ul class="list-unstyled">
+                                    <li></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+
+                        <div class="form-group js-group-Customer.PrimaryAddress.country  required ">
+                            <label class="">
+                                Country
+                            </label>
+                            <select class="form-control js-collection" id="Customer.PrimaryAddress.country"
+                                name="Customer.PrimaryAddress.country">
+                                <option value="company.country.can">
+                                    Canada
+                                </option>
+                                <option value="company.country.usa" selected="">
+                                    United States
+                                </option>
+                                }
+                            </select>
+                            <div class="help-block with-errors" style="display: none;">
+                                <ul class="list-unstyled">
+                                    <li></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-md-6">
+
+                        <div class="form-group js-group-Customer.CustomField.11  required custom-field">
+                            <label class="">
+                                Type of Residence
+                            </label>
+                            <select class="form-control js-select" id="Customer.CustomField.11"
+                                name="Customer.CustomField.11">
+                                <option value="1">
+                                    Rent
+                                </option>
+                                <option value="2">
+                                    Own
+                                </option>
+                                <option value="3">
+                                    Live w/ Relatives
+                                </option>
+                                }
+                            </select>
+                            <div class="help-block with-errors" style="display: none;">
+                                <ul class="list-unstyled">
+                                    <li></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+
+                        <div class="form-group js-group-Customer.phone  required ">
+                            <label class="">
+                                Phone
+                            </label>
+                            <input type="text" autocomplete="off" class="form-control js-phone" id="Customer.phone"
+                                name="Customer.phone" value="" maxlength="14">
+                            <div class="help-block with-errors" style="">
+                                <ul class="list-unstyled">
+                                    <li>Field is required</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-md-6">
+
+                        <div class="form-group js-group-Customer.CustomField.16  required custom-field">
+                            <label class="">
+                                What Month and Year did you start living in the US
+                            </label>
+                            <input type="text" autocomplete="off" class="form-control js-date"
+                                id="Customer.CustomField.16" data-initial-value="" name="Customer.CustomField.16"
+                                value="" placeholder="MM/DD/YYYY" maxlength="10">
+                            <div class="help-block with-errors" style="">
+                                <ul class="list-unstyled">
+                                    <li>Field is required</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+
+                        <div class="form-group js-group-Customer.CustomField.12  required custom-field">
+                            <label class="">
+                                Best Time to Call
+                            </label>
+                            <input type="text" autocomplete="off" class="form-control js-text"
+                                id="Customer.CustomField.12" name="Customer.CustomField.12" value="">
+                            <div class="help-block with-errors" style="">
+                                <ul class="list-unstyled">
+                                    <li>Field is required</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-md-6">
+
+                        <div class="form-group js-group-Customer.email   ">
+                            <label class="">
+                                Email
+                            </label>
+                            <input type="email" class="form-control js-email" id="Customer.email" name="Customer.email"
+                                value="">
+                            <div class="help-block with-errors" style="display: none;">
+                                <ul class="list-unstyled">
+                                    <li></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+
+                        <div class="form-group js-group-Customer.CustomField.14  required custom-field">
+                            <label class="">
+                                Dependents
+                            </label>
+                            <select class="form-control js-select" id="Customer.CustomField.14"
+                                name="Customer.CustomField.14">
+                                <option value="1">
+                                    No Dependents
+                                </option>
+                                <option value="2">
+                                    1
+                                </option>
+                                <option value="3">
+                                    2
+                                </option>
+                                <option value="4">
+                                    3
+                                </option>
+                                <option value="5">
+                                    4
+                                </option>
+                                <option value="6">
+                                    5
+                                </option>
+                                <option value="7">
+                                    6
+                                </option>
+                                }
+                            </select>
+                            <div class="help-block with-errors" style="display: none;">
+                                <ul class="list-unstyled">
+                                    <li></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-md-6">
+
+                        <div class="form-group js-group-Customer.CustomField.6  required custom-field">
+                            <label class="">
+                                Marital Status
+                            </label>
+                            <select class="form-control js-select" id="Customer.CustomField.6"
+                                name="Customer.CustomField.6">
+                                <option value="1">
+                                    Single
+                                </option>
+                                <option value="2">
+                                    Married
+                                </option>
+                                }
+                            </select>
+                            <div class="help-block with-errors" style="display: none;">
+                                <ul class="list-unstyled">
+                                    <li></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+
+                        <div class="form-group js-group-Customer.CustomField.15   custom-field">
+                            <label class="">
+                                Spouses Name
+                            </label>
+                            <input type="text" autocomplete="off" class="form-control js-text"
+                                id="Customer.CustomField.15" name="Customer.CustomField.15" value="">
+                            <div class="help-block with-errors" style="display: none;">
+                                <ul class="list-unstyled">
+                                    <li></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-md-6">
+
+                        <div class="form-group js-group-Customer.CustomField.23   custom-field">
+                            <label class="">
+                                Spouses Phone
+                            </label>
+                            <input type="text" autocomplete="off" class="form-control js-phone"
+                                id="Customer.CustomField.23" name="Customer.CustomField.23" value="" maxlength="14">
+                            <div class="help-block with-errors" style="display: none;">
+                                <ul class="list-unstyled">
+                                    <li></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+
+                        <div class="form-group js-group-Customer.CustomField.43   custom-field">
+                            <label class="">
+                                Does you spouse currently have a job
+                            </label>
+                            <select class="form-control js-select" id="Customer.CustomField.43"
+                                name="Customer.CustomField.43">
+                                <option value="1">
+                                    Yes
+                                </option>
+                                <option value="2">
+                                    No
+                                </option>
+                                }
+                            </select>
+                            <div class="help-block with-errors" style="display: none;">
+                                <ul class="list-unstyled">
+                                    <li></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-md-6">
+
+                        <div class="form-group js-group-Customer.CustomField.44   custom-field">
+                            <label class="">
+                                Spouse Monthly Income
+                            </label>
+                            <input type="text" autocomplete="off" class="form-control js-currency"
+                                id="Customer.CustomField.44" name="Customer.CustomField.44" value="0">
+                            <div class="help-block with-errors" style="display: none;">
+                                <ul class="list-unstyled">
+                                    <li></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+
+                        <div class="form-group js-group-Customer.Reference.name  required " data-strict="">
+                            <label class="">
+                                Name of the closest relative who does not live with you
+                            </label>
+                            <input type="text" autocomplete="off" class="form-control js-text"
+                                id="Customer.Reference.name" name="Customer.Reference.name" value="">
+                            <div class="help-block with-errors" style="">
+                                <ul class="list-unstyled">
+                                    <li>Field is required</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-md-6">
+
+                        <div class="form-group js-group-Customer.Reference.primaryPhone  required " data-strict="">
+                            <label class="">
+                                Phone of the closest relative who does not live with you
+                            </label>
+                            <input type="text" autocomplete="off" class="form-control js-phone"
+                                id="Customer.Reference.primaryPhone" name="Customer.Reference.primaryPhone" value=""
+                                maxlength="14">
+                            <div class="help-block with-errors" style="">
+                                <ul class="list-unstyled">
+                                    <li>Field is required</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+
+                        <div class="form-group js-group-Customer.Reference.Address.address1  required ">
+                            <label class="">
+                                Address of the closest relative who does not live with you
+                            </label>
+                            <input type="text" autocomplete="off" class="form-control js-text"
+                                id="Customer.Reference.Address.address1" name="Customer.Reference.Address.address1"
+                                value="">
+                            <div class="help-block with-errors" style="">
+                                <ul class="list-unstyled">
+                                    <li>Field is required</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-md-6">
+
+                        <div class="form-group js-group-Customer.Reference.Address.zipcode_usa  required ">
+                            <label class="">
+                                Zip Code of the closest relative who does not live with you
+                            </label>
+                            <input type="text" autocomplete="off" class="form-control js-zip"
+                                id="Customer.Reference.Address.zipcode_usa"
+                                name="Customer.Reference.Address.zipcode_usa" value="" maxlength="10">
+                            <div class="help-block with-errors" style="">
+                                <ul class="list-unstyled">
+                                    <li>Field is required</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+
+                        <div class="form-group js-group-Customer.Reference.Address.city  required ">
+                            <label class="">
+                                City of the closest relative who does not live with you
+                            </label>
+                            <input type="text" autocomplete="off" class="form-control js-text"
+                                id="Customer.Reference.Address.city" name="Customer.Reference.Address.city" value="">
+                            <div class="help-block with-errors" style="">
+                                <ul class="list-unstyled">
+                                    <li>Field is required</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-md-6">
+
+                        <div class="form-group js-group-Customer.Reference.Address.state_usa  required ">
+                            <label class="">
+                                State of the closest relative who does not live with you
+                            </label>
+                            <select class="form-control js-collection" id="Customer.Reference.Address.state_usa"
+                                name="Customer.Reference.Address.state_usa">
+                                <option value="geo.state.AA">
+                                    U.S. Armed Forces – Americas
+                                </option>
+                                <option value="geo.state.AE">
+                                    U.S. Armed Forces – Europe
+                                </option>
+                                <option value="geo.state.AK">
+                                    Alaska
+                                </option>
+                                <option value="geo.state.AL">
+                                    Alabama
+                                </option>
+                                <option value="geo.state.AP">
+                                    U.S. Armed Forces – Pacific
+                                </option>
+                                <option value="geo.state.AR">
+                                    Arkansas
+                                </option>
+                                <option value="geo.state.AS">
+                                    American Samoa
+                                </option>
+                                <option value="geo.state.AZ">
+                                    Arizona
+                                </option>
+                                <option value="geo.state.CA">
+                                    California
+                                </option>
+                                <option value="geo.state.CO">
+                                    Colorado
+                                </option>
+                                <option value="geo.state.CT">
+                                    Connecticut
+                                </option>
+                                <option value="geo.state.DC">
+                                    District of Columbia
+                                </option>
+                                <option value="geo.state.DE">
+                                    Delaware
+                                </option>
+                                <option value="geo.state.FL">
+                                    Florida
+                                </option>
+                                <option value="geo.state.FM">
+                                    Federated States of Micronesia
+                                </option>
+                                <option value="geo.state.GA">
+                                    Georgia
+                                </option>
+                                <option value="geo.state.GU">
+                                    Guam
+                                </option>
+                                <option value="geo.state.HI">
+                                    Hawaii
+                                </option>
+                                <option value="geo.state.IA">
+                                    Iowa
+                                </option>
+                                <option value="geo.state.ID">
+                                    Idaho
+                                </option>
+                                <option value="geo.state.IL">
+                                    Illinois
+                                </option>
+                                <option value="geo.state.IN">
+                                    Indiana
+                                </option>
+                                <option value="geo.state.KS">
+                                    Kansas
+                                </option>
+                                <option value="geo.state.KY">
+                                    Kentucky
+                                </option>
+                                <option value="geo.state.LA">
+                                    Louisiana
+                                </option>
+                                <option value="geo.state.MA">
+                                    Massachusetts
+                                </option>
+                                <option value="geo.state.MD">
+                                    Maryland
+                                </option>
+                                <option value="geo.state.ME">
+                                    Maine
+                                </option>
+                                <option value="geo.state.MH">
+                                    Marshall Islands
+                                </option>
+                                <option value="geo.state.MI">
+                                    Michigan
+                                </option>
+                                <option value="geo.state.MN">
+                                    Minnesota
+                                </option>
+                                <option value="geo.state.MO">
+                                    Missouri
+                                </option>
+                                <option value="geo.state.MP">
+                                    Northern Mariana Islands
+                                </option>
+                                <option value="geo.state.MS">
+                                    Mississippi
+                                </option>
+                                <option value="geo.state.MT">
+                                    Montana
+                                </option>
+                                <option value="geo.state.NC">
+                                    North Carolina
+                                </option>
+                                <option value="geo.state.ND">
+                                    North Dakota
+                                </option>
+                                <option value="geo.state.NE">
+                                    Nebraska
+                                </option>
+                                <option value="geo.state.NH">
+                                    New Hampshire
+                                </option>
+                                <option value="geo.state.NJ">
+                                    New Jersey
+                                </option>
+                                <option value="geo.state.NM">
+                                    New Mexico
+                                </option>
+                                <option value="geo.state.NV">
+                                    Nevada
+                                </option>
+                                <option value="geo.state.NY">
+                                    New York
+                                </option>
+                                <option value="geo.state.OH">
+                                    Ohio
+                                </option>
+                                <option value="geo.state.OK">
+                                    Oklahoma
+                                </option>
+                                <option value="geo.state.OR">
+                                    Oregon
+                                </option>
+                                <option value="geo.state.PA">
+                                    Pennsylvania
+                                </option>
+                                <option value="geo.state.PR">
+                                    Puerto Rico
+                                </option>
+                                <option value="geo.state.PW">
+                                    Palau
+                                </option>
+                                <option value="geo.state.RI">
+                                    Rhode Island
+                                </option>
+                                <option value="geo.state.SC">
+                                    South Carolina
+                                </option>
+                                <option value="geo.state.SD">
+                                    South Dakota
+                                </option>
+                                <option value="geo.state.TN">
+                                    Tennessee
+                                </option>
+                                <option value="geo.state.TX">
+                                    Texas
+                                </option>
+                                <option value="geo.state.UT">
+                                    Utah
+                                </option>
+                                <option value="geo.state.VA">
+                                    Virginia
+                                </option>
+                                <option value="geo.state.VI">
+                                    Virgin Islands
+                                </option>
+                                <option value="geo.state.VT">
+                                    Vermont
+                                </option>
+                                <option value="geo.state.WA">
+                                    Washington
+                                </option>
+                                <option value="geo.state.WI">
+                                    Wisconsin
+                                </option>
+                                <option value="geo.state.WV">
+                                    West Virginia
+                                </option>
+                                <option value="geo.state.WY">
+                                    Wyoming
+                                </option>
+                                }
+                            </select>
+                            <div class="help-block with-errors" style="display: none;">
+                                <ul class="list-unstyled">
+                                    <li></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+
+                        <div class="form-group js-group-Customer.Reference.Address.country  required ">
+                            <label class="">
+                                Country of the closest relative who does not live with you
+                            </label>
+                            <select class="form-control js-collection" id="Customer.Reference.Address.country"
+                                name="Customer.Reference.Address.country">
+                                <option value="company.country.can">
+                                    Canada
+                                </option>
+                                <option value="company.country.usa" selected="">
+                                    United States
+                                </option>
+                                }
+                            </select>
+                            <div class="help-block with-errors" style="display: none;">
+                                <ul class="list-unstyled">
+                                    <li></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-md-6">
+
+                        <div class="form-group js-group-Customer.Reference.relation  required " data-strict="">
+                            <label class="">
+                                Relation of the closest relative who does not live with you
+                            </label>
+                            <select class="form-control js-collection" id="Customer.Reference.relation"
+                                name="Customer.Reference.relation">
+                                <option value="customerReference.relation.brother">
+                                    Brother
+                                </option>
+                                <option value="customerReference.relation.coWorker">
+                                    CoWorker
+                                </option>
+                                <option value="customerReference.relation.daughter">
+                                    Daughter
+                                </option>
+                                <option value="customerReference.relation.father">
+                                    Father
+                                </option>
+                                <option value="customerReference.relation.friend">
+                                    Friend
+                                </option>
+                                <option value="customerReference.relation.husband">
+                                    Husband
+                                </option>
+                                <option value="customerReference.relation.mother">
+                                    Mother
+                                </option>
+                                <option value="customerReference.relation.sister">
+                                    Sister
+                                </option>
+                                <option value="customerReference.relation.son">
+                                    Son
+                                </option>
+                                <option value="customerReference.relation.wife">
+                                    Wife
+                                </option>
+                                }
+                            </select>
+                            <div class="help-block with-errors" style="display: none;">
+                                <ul class="list-unstyled">
+                                    <li></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                    </div>
+                </div>
+            </section>
+
+
+
+
+
+            <section class="controls js-section-2">
+                <h2>References</h2>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group js-group-Customer.CustomField.17  required custom-field">
+                            <label class="">
+                                Reference 1 Name
+                            </label>
+                            <input type="text" autocomplete="off" class="form-control js-text"
+                                id="Customer.CustomField.17" name="Customer.CustomField.17" value="">
+                            <div class="help-block with-errors" style="">
+                                <ul class="list-unstyled">
+                                    <li>Field is required</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-md-6">
+
+                        <div class="form-group js-group-Customer.CustomField.18  required custom-field">
+                            <label class="">
+                                Reference 1 Phone
+                            </label>
+                            <input type="text" autocomplete="off" class="form-control js-text"
+                                id="Customer.CustomField.18" name="Customer.CustomField.18" value="">
+                            <div class="help-block with-errors" style="">
+                                <ul class="list-unstyled">
+                                    <li>Field is required</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+
+                        <div class="form-group js-group-Customer.CustomField.27  required custom-field">
+                            <label class="">
+                                Reference 1 Best Time To Call
+                            </label>
+                            <input type="text" autocomplete="off" class="form-control js-text"
+                                id="Customer.CustomField.27" name="Customer.CustomField.27" value="">
+                            <div class="help-block with-errors" style="">
+                                <ul class="list-unstyled">
+                                    <li>Field is required</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-md-6">
+
+                        <div class="form-group js-group-Customer.CustomField.26  required custom-field">
+                            <label class="">
+                                Reference 1 Relation
+                            </label>
+                            <input type="text" autocomplete="off" class="form-control js-text"
+                                id="Customer.CustomField.26" name="Customer.CustomField.26" value="">
+                            <div class="help-block with-errors" style="">
+                                <ul class="list-unstyled">
+                                    <li>Field is required</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+
+                        <div class="form-group js-group-Customer.CustomField.28   custom-field">
+                            <label class="">
+                                Reference 1 Email
+                            </label>
+                            <input type="text" autocomplete="off" class="form-control js-text"
+                                id="Customer.CustomField.28" name="Customer.CustomField.28" value="">
+                            <div class="help-block with-errors" style="display: none;">
+                                <ul class="list-unstyled">
+                                    <li></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-md-6">
+
+                        <div class="form-group js-group-Customer.CustomField.29   custom-field">
+                            <label class="">
+                                Reference 1 Address
+                            </label>
+                            <input type="text" autocomplete="off" class="form-control js-text"
+                                id="Customer.CustomField.29" name="Customer.CustomField.29" value="">
+                            <div class="help-block with-errors" style="display: none;">
+                                <ul class="list-unstyled">
+                                    <li></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+
+                        <div class="form-group js-group-Customer.CustomField.30  required custom-field">
+                            <label class="">
+                                Reference 2 Name
+                            </label>
+                            <input type="text" autocomplete="off" class="form-control js-text"
+                                id="Customer.CustomField.30" name="Customer.CustomField.30" value="">
+                            <div class="help-block with-errors" style="">
+                                <ul class="list-unstyled">
+                                    <li>Field is required</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-md-6">
+
+                        <div class="form-group js-group-Customer.CustomField.31  required custom-field">
+                            <label class="">
+                                Reference 2 Phone
+                            </label>
+                            <input type="text" autocomplete="off" class="form-control js-text"
+                                id="Customer.CustomField.31" name="Customer.CustomField.31" value="">
+                            <div class="help-block with-errors" style="">
+                                <ul class="list-unstyled">
+                                    <li>Field is required</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+
+                        <div class="form-group js-group-Customer.CustomField.32  required custom-field">
+                            <label class="">
+                                Reference 2 Best Time To Call
+                            </label>
+                            <input type="text" autocomplete="off" class="form-control js-text"
+                                id="Customer.CustomField.32" name="Customer.CustomField.32" value="">
+                            <div class="help-block with-errors" style="">
+                                <ul class="list-unstyled">
+                                    <li>Field is required</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-md-6">
+
+                        <div class="form-group js-group-Customer.CustomField.37  required custom-field">
+                            <label class="">
+                                Reference 2 Relation
+                            </label>
+                            <input type="text" autocomplete="off" class="form-control js-text"
+                                id="Customer.CustomField.37" name="Customer.CustomField.37" value="">
+                            <div class="help-block with-errors" style="">
+                                <ul class="list-unstyled">
+                                    <li>Field is required</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+
+                        <div class="form-group js-group-Customer.CustomField.33   custom-field">
+                            <label class="">
+                                Reference 2 Email
+                            </label>
+                            <input type="text" autocomplete="off" class="form-control js-text"
+                                id="Customer.CustomField.33" name="Customer.CustomField.33" value="">
+                            <div class="help-block with-errors" style="display: none;">
+                                <ul class="list-unstyled">
+                                    <li></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-md-6">
+
+                        <div class="form-group js-group-Customer.CustomField.34   custom-field">
+                            <label class="">
+                                Reference 2 Address
+                            </label>
+                            <input type="text" autocomplete="off" class="form-control js-text"
+                                id="Customer.CustomField.34" name="Customer.CustomField.34" value="">
+                            <div class="help-block with-errors" style="display: none;">
+                                <ul class="list-unstyled">
+                                    <li></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+
+                        <div class="form-group js-group-Customer.CustomField.35  required custom-field">
+                            <label class="">
+                                Reference 3 Name
+                            </label>
+                            <input type="text" autocomplete="off" class="form-control js-text"
+                                id="Customer.CustomField.35" name="Customer.CustomField.35" value="">
+                            <div class="help-block with-errors" style="">
+                                <ul class="list-unstyled">
+                                    <li>Field is required</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-md-6">
+
+                        <div class="form-group js-group-Customer.CustomField.36  required custom-field">
+                            <label class="">
+                                Reference 3 Phone
+                            </label>
+                            <input type="text" autocomplete="off" class="form-control js-text"
+                                id="Customer.CustomField.36" name="Customer.CustomField.36" value="">
+                            <div class="help-block with-errors" style="">
+                                <ul class="list-unstyled">
+                                    <li>Field is required</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+
+                        <div class="form-group js-group-Customer.CustomField.38  required custom-field">
+                            <label class="">
+                                Reference 3 Best Time To Call
+                            </label>
+                            <input type="text" autocomplete="off" class="form-control js-text"
+                                id="Customer.CustomField.38" name="Customer.CustomField.38" value="">
+                            <div class="help-block with-errors" style="">
+                                <ul class="list-unstyled">
+                                    <li>Field is required</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-md-6">
+
+                        <div class="form-group js-group-Customer.CustomField.39  required custom-field">
+                            <label class="">
+                                Reference 3 Relation
+                            </label>
+                            <input type="text" autocomplete="off" class="form-control js-text"
+                                id="Customer.CustomField.39" name="Customer.CustomField.39" value="">
+                            <div class="help-block with-errors" style="">
+                                <ul class="list-unstyled">
+                                    <li>Field is required</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+
+                        <div class="form-group js-group-Customer.CustomField.40   custom-field">
+                            <label class="">
+                                Reference 3 Email
+                            </label>
+                            <input type="text" autocomplete="off" class="form-control js-text"
+                                id="Customer.CustomField.40" name="Customer.CustomField.40" value="">
+                            <div class="help-block with-errors" style="display: none;">
+                                <ul class="list-unstyled">
+                                    <li></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-md-6">
+
+                        <div class="form-group js-group-Customer.CustomField.41   custom-field">
+                            <label class="">
+                                Reference 3 Address
+                            </label>
+                            <input type="text" autocomplete="off" class="form-control js-text"
+                                id="Customer.CustomField.41" name="Customer.CustomField.41" value="">
+                            <div class="help-block with-errors" style="display: none;">
+                                <ul class="list-unstyled">
+                                    <li></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                    </div>
+                </div>
+            </section>
+            <section class="controls js-section-3">
+                <h2>Loan Information</h2>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group js-group-LoanSettings.CustomField.3   custom-field">
+                            <label class="">
+                                Reason for Loan
+                            </label>
+                            <select class="form-control js-select" id="LoanSettings.CustomField.3"
+                                name="LoanSettings.CustomField.3">
+                                <option value="1">
+                                    Personal
+                                </option>
+                                <option value="2">
+                                    Immigration
+                                </option>
+                                <option value="3">
+                                    Other
+                                </option>
+                                }
+                            </select>
+                            <div class="help-block with-errors" style="display: none;">
+                                <ul class="list-unstyled">
+                                    <li></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-md-6">
+
+                        <div class="form-group js-group-LoanSettings.CustomField.19   custom-field">
+                            <label class="">
+                                What will the loan be used for
+                            </label>
+                            <input type="text" autocomplete="off" class="form-control js-text"
+                                id="LoanSettings.CustomField.19" name="LoanSettings.CustomField.19" value="">
+                            <div class="help-block with-errors" style="display: none;">
+                                <ul class="list-unstyled">
+                                    <li></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+
+                        <div class="form-group js-group-LoanSettings.CustomField.7  required custom-field">
+                            <label class="">
+                                Promo Code o Numero de Gafete
+                            </label>
+                            <input type="text" autocomplete="off" class="form-control js-text"
+                                id="LoanSettings.CustomField.7" name="LoanSettings.CustomField.7" value="">
+                            <div class="help-block with-errors" style="">
+                                <ul class="list-unstyled">
+                                    <li>Field is required</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-md-6">
+
+                        <div class="form-group js-group-Customer.CustomField.2  required custom-field">
+                            <label class="">
+                                How did you hear about us
+                            </label>
+                            <input type="text" autocomplete="off" class="form-control js-text"
+                                id="Customer.CustomField.2" name="Customer.CustomField.2" value="">
+                            <div class="help-block with-errors" style="">
+                                <ul class="list-unstyled">
+                                    <li>Field is required</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+
+                        <div class="form-group js-group-Customer.CustomField.5   custom-field">
+                            <label class="">
+                                Name of person who referred you
+                            </label>
+                            <input type="text" autocomplete="off" class="form-control js-text"
+                                id="Customer.CustomField.5" name="Customer.CustomField.5" value="">
+                            <div class="help-block with-errors" style="display: none;">
+                                <ul class="list-unstyled">
+                                    <li></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                    </div>
+                </div>
+            </section>
+
+
+
+
+
+
+            <section class="controls js-section-4">
+                <h2>Employer Information</h2>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group js-group-Customer.Employer.companyName  required " data-strict="">
+                            <label class="">
+                                Company Name
+                            </label>
+                            <input type="text" autocomplete="off" class="form-control js-text"
+                                id="Customer.Employer.companyName" name="Customer.Employer.companyName" value="">
+                            <div class="help-block with-errors" style="">
+                                <ul class="list-unstyled">
+                                    <li>Field is required</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-md-6">
+
+                        <div class="form-group js-group-Employer.CustomField.46  required custom-field">
+                            <label class="">
+                                Type of Employment
+                            </label>
+                            <select class="form-control js-select" id="Employer.CustomField.46"
+                                name="Employer.CustomField.46">
+                                <option value="1">
+                                    Full-time
+                                </option>
+                                <option value="2">
+                                    Part-time
+                                </option>
+                                <option value="3">
+                                    Seasonal
+                                </option>
+                                }
+                            </select>
+                            <div class="help-block with-errors" style="display: none;">
+                                <ul class="list-unstyled">
+                                    <li></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+
+                        <div class="form-group js-group-Customer.Employer.title  required " data-strict="">
+                            <label class="">
+                                Title
+                            </label>
+                            <input type="text" autocomplete="off" class="form-control js-text"
+                                id="Customer.Employer.title" name="Customer.Employer.title" value="">
+                            <div class="help-block with-errors" style="">
+                                <ul class="list-unstyled">
+                                    <li>Field is required</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-md-6">
+
+                        <div class="form-group js-group-Employer.CustomField.9  required custom-field">
+                            <label class="">
+                                Working Hours
+                            </label>
+                            <input type="text" autocomplete="off" class="form-control js-text"
+                                id="Employer.CustomField.9" name="Employer.CustomField.9" value="">
+                            <div class="help-block with-errors" style="">
+                                <ul class="list-unstyled">
+                                    <li>Field is required</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+
+                        <div class="form-group js-group-Customer.Employer.hireDate  required " data-strict="">
+                            <label class="">
+                                Hire Date
+                            </label>
+                            <input type="text" autocomplete="off" class="form-control js-date"
+                                id="Customer.Employer.hireDate" data-initial-value="" name="Customer.Employer.hireDate"
+                                value="" placeholder="MM/DD/YYYY" maxlength="10">
+                            <div class="help-block with-errors" style="">
+                                <ul class="list-unstyled">
+                                    <li>Field is required</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-md-6">
+
+                        <div class="form-group js-group-Customer.Employer.Address.address1  required ">
+                            <label class="">
+                                Employer's Address
+                            </label>
+                            <input type="text" autocomplete="off" class="form-control js-text"
+                                id="Customer.Employer.Address.address1" name="Customer.Employer.Address.address1"
+                                value="">
+                            <div class="help-block with-errors" style="">
+                                <ul class="list-unstyled">
+                                    <li>Field is required</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+
+                        <div class="form-group js-group-Customer.Employer.Address.zipcode_usa  required ">
+                            <label class="">
+                                ZIP Code
+                            </label>
+                            <input type="text" autocomplete="off" class="form-control js-zip"
+                                id="Customer.Employer.Address.zipcode_usa" name="Customer.Employer.Address.zipcode_usa"
+                                value="" maxlength="10">
+                            <div class="help-block with-errors" style="">
+                                <ul class="list-unstyled">
+                                    <li>Field is required</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-md-6">
+
+                        <div class="form-group js-group-Customer.Employer.Address.city  required ">
+                            <label class="">
+                                City
+                            </label>
+                            <input type="text" autocomplete="off" class="form-control js-text"
+                                id="Customer.Employer.Address.city" name="Customer.Employer.Address.city" value="">
+                            <div class="help-block with-errors" style="">
+                                <ul class="list-unstyled">
+                                    <li>Field is required</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+
+                        <div class="form-group js-group-Customer.Employer.Address.state_usa  required ">
+                            <label class="">
+                                State
+                            </label>
+                            <select class="form-control js-collection" id="Customer.Employer.Address.state_usa"
+                                name="Customer.Employer.Address.state_usa">
+                                <option value="geo.state.AA">
+                                    U.S. Armed Forces – Americas
+                                </option>
+                                <option value="geo.state.AE">
+                                    U.S. Armed Forces – Europe
+                                </option>
+                                <option value="geo.state.AK">
+                                    Alaska
+                                </option>
+                                <option value="geo.state.AL">
+                                    Alabama
+                                </option>
+                                <option value="geo.state.AP">
+                                    U.S. Armed Forces – Pacific
+                                </option>
+                                <option value="geo.state.AR">
+                                    Arkansas
+                                </option>
+                                <option value="geo.state.AS">
+                                    American Samoa
+                                </option>
+                                <option value="geo.state.AZ">
+                                    Arizona
+                                </option>
+                                <option value="geo.state.CA">
+                                    California
+                                </option>
+                                <option value="geo.state.CO">
+                                    Colorado
+                                </option>
+                                <option value="geo.state.CT">
+                                    Connecticut
+                                </option>
+                                <option value="geo.state.DC">
+                                    District of Columbia
+                                </option>
+                                <option value="geo.state.DE">
+                                    Delaware
+                                </option>
+                                <option value="geo.state.FL">
+                                    Florida
+                                </option>
+                                <option value="geo.state.FM">
+                                    Federated States of Micronesia
+                                </option>
+                                <option value="geo.state.GA">
+                                    Georgia
+                                </option>
+                                <option value="geo.state.GU">
+                                    Guam
+                                </option>
+                                <option value="geo.state.HI">
+                                    Hawaii
+                                </option>
+                                <option value="geo.state.IA">
+                                    Iowa
+                                </option>
+                                <option value="geo.state.ID">
+                                    Idaho
+                                </option>
+                                <option value="geo.state.IL">
+                                    Illinois
+                                </option>
+                                <option value="geo.state.IN">
+                                    Indiana
+                                </option>
+                                <option value="geo.state.KS">
+                                    Kansas
+                                </option>
+                                <option value="geo.state.KY">
+                                    Kentucky
+                                </option>
+                                <option value="geo.state.LA">
+                                    Louisiana
+                                </option>
+                                <option value="geo.state.MA">
+                                    Massachusetts
+                                </option>
+                                <option value="geo.state.MD">
+                                    Maryland
+                                </option>
+                                <option value="geo.state.ME">
+                                    Maine
+                                </option>
+                                <option value="geo.state.MH">
+                                    Marshall Islands
+                                </option>
+                                <option value="geo.state.MI">
+                                    Michigan
+                                </option>
+                                <option value="geo.state.MN">
+                                    Minnesota
+                                </option>
+                                <option value="geo.state.MO">
+                                    Missouri
+                                </option>
+                                <option value="geo.state.MP">
+                                    Northern Mariana Islands
+                                </option>
+                                <option value="geo.state.MS">
+                                    Mississippi
+                                </option>
+                                <option value="geo.state.MT">
+                                    Montana
+                                </option>
+                                <option value="geo.state.NC">
+                                    North Carolina
+                                </option>
+                                <option value="geo.state.ND">
+                                    North Dakota
+                                </option>
+                                <option value="geo.state.NE">
+                                    Nebraska
+                                </option>
+                                <option value="geo.state.NH">
+                                    New Hampshire
+                                </option>
+                                <option value="geo.state.NJ">
+                                    New Jersey
+                                </option>
+                                <option value="geo.state.NM">
+                                    New Mexico
+                                </option>
+                                <option value="geo.state.NV">
+                                    Nevada
+                                </option>
+                                <option value="geo.state.NY">
+                                    New York
+                                </option>
+                                <option value="geo.state.OH">
+                                    Ohio
+                                </option>
+                                <option value="geo.state.OK">
+                                    Oklahoma
+                                </option>
+                                <option value="geo.state.OR">
+                                    Oregon
+                                </option>
+                                <option value="geo.state.PA">
+                                    Pennsylvania
+                                </option>
+                                <option value="geo.state.PR">
+                                    Puerto Rico
+                                </option>
+                                <option value="geo.state.PW">
+                                    Palau
+                                </option>
+                                <option value="geo.state.RI">
+                                    Rhode Island
+                                </option>
+                                <option value="geo.state.SC">
+                                    South Carolina
+                                </option>
+                                <option value="geo.state.SD">
+                                    South Dakota
+                                </option>
+                                <option value="geo.state.TN">
+                                    Tennessee
+                                </option>
+                                <option value="geo.state.TX">
+                                    Texas
+                                </option>
+                                <option value="geo.state.UT">
+                                    Utah
+                                </option>
+                                <option value="geo.state.VA">
+                                    Virginia
+                                </option>
+                                <option value="geo.state.VI">
+                                    Virgin Islands
+                                </option>
+                                <option value="geo.state.VT">
+                                    Vermont
+                                </option>
+                                <option value="geo.state.WA">
+                                    Washington
+                                </option>
+                                <option value="geo.state.WI">
+                                    Wisconsin
+                                </option>
+                                <option value="geo.state.WV">
+                                    West Virginia
+                                </option>
+                                <option value="geo.state.WY">
+                                    Wyoming
+                                </option>
+                                }
+                            </select>
+                            <div class="help-block with-errors" style="display: none;">
+                                <ul class="list-unstyled">
+                                    <li></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-md-6">
+
+                        <div class="form-group js-group-Customer.Employer.Address.country  required ">
+                            <label class="">
+                                Country
+                            </label>
+                            <select class="form-control js-collection" id="Customer.Employer.Address.country"
+                                name="Customer.Employer.Address.country">
+                                <option value="company.country.can">
+                                    Canada
+                                </option>
+                                <option value="company.country.usa" selected="">
+                                    United States
+                                </option>
+                                }
+                            </select>
+                            <div class="help-block with-errors" style="display: none;">
+                                <ul class="list-unstyled">
+                                    <li></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+
+                        <div class="form-group js-group-Customer.CustomField.45   custom-field">
+                            <label class="">
+                                Name of Direct Boss
+                            </label>
+                            <input type="text" autocomplete="off" class="form-control js-text"
+                                id="Customer.CustomField.45" name="Customer.CustomField.45" value="">
+                            <div class="help-block with-errors" style="display: none;">
+                                <ul class="list-unstyled">
+                                    <li></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-md-6">
+
+                        <div class="form-group js-group-Customer.Employer.phone  required " data-strict="">
+                            <label class="">
+                                Employers Phone
+                            </label>
+                            <input type="text" autocomplete="off" class="form-control js-phone"
+                                id="Customer.Employer.phone" name="Customer.Employer.phone" value="" maxlength="14">
+                            <div class="help-block with-errors" style="">
+                                <ul class="list-unstyled">
+                                    <li>Field is required</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+
+                        <div class="form-group js-group-Customer.Employer.incomeFrequency  required " data-strict="">
+                            <label class="">
+                                Income Frequency
+                            </label>
+                            <select class="form-control js-collection" id="Customer.Employer.incomeFrequency"
+                                name="Customer.Employer.incomeFrequency">
+                                <option value="customerEmployer.incomeFrequency.annually">
+                                    Annually
+                                </option>
+                                <option value="customerEmployer.incomeFrequency.biWeekly" selected="">
+                                    Bi-Weekly
+                                </option>
+                                <option value="customerEmployer.incomeFrequency.monthly">
+                                    Monthly
+                                </option>
+                                <option value="customerEmployer.incomeFrequency.semiMonthly">
+                                    Semi-Monthly
+                                </option>
+                                <option value="customerEmployer.incomeFrequency.weekly">
+                                    Weekly
+                                </option>
+                                }
+                            </select>
+                            <div class="help-block with-errors" style="display: none;">
+                                <ul class="list-unstyled">
+                                    <li></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-md-6">
+
+                        <div class="form-group js-group-Customer.Employer.income  required " data-strict="">
+                            <label class="">
+                                Monthly Income
+                            </label>
+                            <input type="text" autocomplete="off" class="form-control js-currency"
+                                id="Customer.Employer.income" name="Customer.Employer.income" value="">
+                            <div class="help-block with-errors" style="">
+                                <ul class="list-unstyled">
+                                    <li>Field is required</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+
+                        <div class="form-group js-group-Customer.CustomField.13  required custom-field">
+                            <label class="">
+                                Total Monthly Expenses
+                            </label>
+                            <input type="text" autocomplete="off" class="form-control js-currency"
+                                id="Customer.CustomField.13" name="Customer.CustomField.13" value="">
+                            <div class="help-block with-errors" style="">
+                                <ul class="list-unstyled">
+                                    <li>Field is required</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                    </div>
+                </div>
+            </section>
+            <section class="controls js-section-5">
+                <h2>Documents</h2>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group js-group-Customer.Documents.1529359983  required ">
+                            <label class="">
+                                Proof of ID
+                            </label>
+                            <input type="file" class="form-control js-customer-file" id="Customer.Documents.1529359983"
+                                name="Customer.Documents.1529359983" data-section="8">
+
+                            <div class="help-block with-errors" style="">
+                                <ul class="list-unstyled">
+                                    <li>Field is required</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="form-group js-group-Customer.Documents.1529359968  required ">
+                            <label class="">
+                                Proof of Income
+                            </label>
+                            <input type="file" class="form-control js-customer-file" id="Customer.Documents.1529359968"
+                                name="Customer.Documents.1529359968" data-section="9">
+
+                            <div class="help-block with-errors" style="">
+                                <ul class="list-unstyled">
+                                    <li>Field is required</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="form-group js-group-Customer.Documents.1529359996  required ">
+                            <label class="">
+                                Proof of Residence
+                            </label>
+                            <input type="file" class="form-control js-customer-file" id="Customer.Documents.1529359996"
+                                name="Customer.Documents.1529359996" data-section="10">
+
+                            <div class="help-block with-errors" style="">
+                                <ul class="list-unstyled">
+                                    <li>Field is required</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="form-group js-group-LoanSettings.CustomField.21   custom-field">
+                            <label class="">
+                                Payment Check
+                            </label>
+                            <select class="form-control js-select" id="LoanSettings.CustomField.21"
+                                name="LoanSettings.CustomField.21">
+                                <option value="1">
+                                    Yes
+                                </option>
+                                <option value="2">
+                                    No
+                                </option>
+                                }
+                            </select>
+                            <div class="help-block with-errors" style="display: none;">
+                                <ul class="list-unstyled">
+                                    <li></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                    </div>
+                </div>
+            </section>
+            <section class="controls js-section-6">
+                <h4>THIS INFORMATION IS CONFIDENTIAL AND WILL NOT BE SHARED WITH OTHERS. I, hereby authorize
+                    verification of all information in my loan application from all sources of employment, financial
+                    history and criminal history. I authorize any duly authorized agent of AYUDATE TEXAS INC. to obtain,
+                    whether the said records are public or private, and including those which may be deemed to be
+                    privileged or confidential and I release all persons from liability on account of such disclosures.
+                    Information appearing on this Authorization will be used exclusively by AYUDATE TEXAS INC. for
+                    identification purposes and for the release information which will be considered in determining any
+                    loan approval. I certify that I have made true, correct, and complete answers and statements on my
+                    loan application. I agree to provide additional information that may be requested to process my loan
+                    application. And to provide current phone numbers and address at all times.</h4>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group js-group-LoanSettings.CustomField.25   custom-field">
+                            <label class=" invisible-field ">
+                                Information Agreement
+                            </label>
+                            <input type="checkbox" class="form-check-input js-checkbox" id="LoanSettings.CustomField.25"
+                                name="LoanSettings.CustomField.25" value="0">
+                            <span>I accept the terms and conditions</span>
+                            <div class="help-block with-errors" style="display: none;">
+                                <ul class="list-unstyled">
+                                    <li></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                    </div>
+                </div>
+            </section>
+            <div class="form-group">
+                <div class="alert alert-success" id="successAlertBox" role="alert" style="display: none;">
+                    Thank you!
+                </div>
+                <div class="alert alert-warning" id="errorAlertBox" role="alert" style="display: none;"></div>
+                <div class="text-center">
+                    <button id="submitBtn" type="submit" class="btn btn-primary" style="width: 250px;">Submit</button>
+                </div>
+            </div>
+            <input type="hidden" id="application_id" name="application_id" value="2">
+            <input type="hidden" id="instance_id" name="instance_id" value="5200861">
+        </form>
+    </div>
+    <!-- Modal -->
+    <div class="modal fade" id="paymentModal" role="dialog">
+        <div class="modal-dialog">
+            <!-- Modal payment profile-->
+            <div class="modal-content">
+                <div class="modal-header"
+                    data-payment="VwdQywCx7RA%2FiKBfzMWG%2Bg%3D%3D.AQIDAHi%2BX%2BVh81S0aKtcUNxP7DKgabSsxzAs2%2FXOaTglVw5u3wHqBjNjo0E0KNtiRj5V2AzxAAAAfjB8BgkqhkiG9w0BBwagbzBtAgEAMGgGCSqGSIb3DQEHATAeBglghkgBZQMEAS4wEQQM3R3FTCobNKsjOQMiAgEQgDvmpt8Zkd%2BIynk6EQRMYTtanX6Ax%2BvflPcqgNip%2B%2BjQ2gHagZNBIvWbk4QJD%2FeSagFHqxiM4fjMFcEAlA%3D%3D.Ro6nDV7wVJkRvl7oyOIjGAXEIOhdriB%2BzfF4xkrpXjrH7X4wqAV5izaNe6dgPXfM5s%2FlKSKabMISQIdrnyEz%2FYxxEKUR7vwn%2B%2Fw6lD1qfKPILgRjIKPaF1o6pe7Lo%2FBzQZQoxxpGudNdGH%2BqCOoJ3GO%2Fyp91WMO37hFzfiHNFqKMjkIqBcvYPliMa8R0a%2FuDPEYhqXVXeHFDPWso9yOznog%2BkLHsCKsafaBi%2BhASR0%2FjWz0C71%2BVCN10EuY1blKF19RXAApRX1xLwO10iciCSi%2FCFZFCqzVHT3liGfgLQoyjE6%2FjLgHivd9lgcuNf4PFX94STH9L9T8WqRyoAmpvGfwB62vBBa3ujbz8Z%2FRhqsR84vvhRLgTIxpAKl7Itaxntl4HZKpT4JHp42e%2FsKZ27aKYzHxIWmbEaUCNAFVE28X2WOVV9tjzjESeFOk5O9PbSgZ7O9VTlkBsUEFOYmoLyJYqzyeUaBJpYGAijhBtLj%2FHypvLIK%2FtSStiXvV7asr1pZYH1SpU85t6fx6cqAMy21uA2bMpecmb6Y3jtmo93dHsJoDQUmOAAVTtxaZeAEUiBMuwxsPe6mo0EXb0W4z%2B13oa%2FoYfAnQHQj7YuNJsej%2BJst57M8ix7HkB971UKckrn2Lj2bQNcwzn527DZiG7%2FDY%2BDFNBiTEsvGy5raeubB1F4eFoQfqOssO4kzanbYtpYxRcF75s%2F9ZTGgBeVTae89FevSe3UGlTs2FwdHou8DHAQUwQcS%2BZg2KFDU1u%2Fb5CmBVMDphYneLvxT4F%2F0c5%2BAPkW5DFQixHpXem8CyWwFccDvNkHc16iONJcw2hJvVg4aP1IaGkUihTaKmi83zQs9mDntMZwnUXkGPwhfn2sta4t3t45e7Ijvc1vFMEfsAY">
+                    <button type="button" class="close" data-dismiss="modal">×</button>
+                    <h4 class="modal-title">Payment Profile</h4>
+                </div>
+                <div class="modal-body">
+                    <p>Payment information is protected by <strong>Secure Payments™</strong>. Please fill out the below
+                        form and click "Submit".</p>
+                    <iframe src="" style="width: 800px; height: 700px; border: 1px solid black;" frameborder="0"
+                        border="0" cellspacing="0"
+                        sandbox="allow-forms allow-pointer-lock	allow-popups allow-scripts allow-modals allow-same-origin">
+                        <p>Your browser does not support iframes.</p>
+                    </iframe>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script
+        type="text/javascript">window.NREUM || (NREUM = {}); NREUM.info = { "beacon": "bam-cell.nr-data.net", "licenseKey": "f8aa5c346e", "applicationID": "14706222", "transactionName": "MVIGNhFUWUBUAkxdXwgYJQEXXFhdGiZ9YG8HRw09UmpYV1QVWRpDEFQ7LgxUWXJFEVRdUwdDDQ0Nc1hBWBJRUG8UUgoGBkc=", "queueTime": 0, "applicationTime": 159, "atts": "HRUFQFlOSk4=", "errorBeacon": "bam-cell.nr-data.net", "agent": "" }</script>
+    <script src="/client/forms/previewApplicationForm.js"></script>
+</body>
+
+</html>
